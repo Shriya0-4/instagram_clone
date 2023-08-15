@@ -10,6 +10,7 @@ class Userposts extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.all(16.0),
@@ -81,16 +82,19 @@ class Userposts extends StatelessWidget {
 
         Padding(
           padding: const EdgeInsets.only(left: 16.0),
-          child: Row(
-            children: [
-              Text('sussane '),
-              Text('sally',
-              style: TextStyle(
-                fontWeight: FontWeight.bold
-              ),),
-              Text('~ ~'),
-            ],
-              ),),
+          child: RichText(text: TextSpan(
+            style: TextStyle(
+              color: Colors.black,
+            ),
+                children: [
+                  TextSpan(text: name,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold
+                  )),
+                  TextSpan(text: 'PHOTO DUMP~~'),
+                ]
+          ),)
+              ),
       ],
     );
   

@@ -59,7 +59,15 @@ class userhome extends StatelessWidget {
             ),
 
             //POSTS
-            Userposts(name:'SMITH'),
+            Expanded(child: ListView.builder(
+              itemCount: people.length,
+              itemBuilder: (context,index) {
+                return Userposts(name: people[index],
+                );
+              },
+            ),
+            )
+            
 
            ],
       ),     
